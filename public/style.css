@@ -1,0 +1,28 @@
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+
+}
+
+#image {
+  height: 90vh;
+  width: auto;
+  margin: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+button {
+  margin: 10px;
+  border-radius: 5px;
+  background-color:lightblue
+}
