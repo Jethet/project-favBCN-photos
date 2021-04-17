@@ -17,7 +17,7 @@ let imagesArray = [
   "https://wallpapercave.com/wp/wp1825725.jpg",
   "https://getwallpapers.com/wallpaper/full/1/5/e/1088009-free-download-barcelona-city-wallpapers-1920x1080-retina.jpg",
   "http://blog.via.com/wp-content/uploads/2016/06/barcelona.jpg",
-  "https://www.barcelona.com/var/plain/storage/images/barcelona_hotels/hotel_barcelona_city_centre/header_container_city_center/header_images_centre_2/9248722-2-eng-GB/header_images_centre_2_header.jpg"
+  "https://www.barcelona.com/var/plain/storage/images/barcelona_hotels/hotel_barcelona_city_centre/header_container_city_center/header_images_centre_2/9248722-2-eng-GB/header_images_centre_2_header.jpg",
 ];
 
 //  https://api.unsplash.com/
@@ -25,8 +25,17 @@ let imagesArray = [
 let buttonForward = document.querySelector("#forwardButton");
 buttonForward.addEventListener("click", slideForward);
 
+let autoForward = document.querySelector("#autoForwardButton");
+autoForward.addEventListener("click", slideAutoForward);
+
 let buttonBack = document.querySelector("#backButton");
 buttonBack.addEventListener("click", slideBack);
+
+let autoBack = document.querySelector("#autoBackButton");
+autoBack.addEventListener("click", slideAutoBack);
+
+let stopButton = document.querySelector("#stopButton");
+stopButton.addEventListener("click", stopSlide);
 
 let slide = document.querySelector("#image");
 let currentSlide = 0;
@@ -46,4 +55,21 @@ function slideBack() {
     currentSlide = 0;
   }
   slide.setAttribute("src", imagesArray[currentSlide]);
+}
+
+function slideAutoForward() {
+  let autoSlide = setInterval(() => {
+    slideForward();
+  }, 1000);
+  if (currentSlide === imagesArray.length - 1) {
+    console.log(currentSlide);
+    
+    clearInterval(autoSlide);
+  }
+}
+
+function slideAutoBack() {}
+
+function stopSlide() {
+  clearInterval(autoSlide);
 }
