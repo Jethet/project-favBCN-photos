@@ -22,3 +22,8 @@ button {
   border-radius: 5px;
   background-color:lightblue
 }
+
+.footer-text {
+  list-style: none;
+  margin-top: 50px;
+}
