@@ -24,6 +24,18 @@ button {
 }
 
 .footer-text {
+  margin: 70px;
+}
+
+.footer-text ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
-  margin-top: 50px;
+  font-style: italic;
+}
+
+.footer-text li {
+  margin-right: 20px;
 }
