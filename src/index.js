@@ -43,6 +43,9 @@ autoBack.addEventListener("click", slideAutoBack);
 let stopButton = document.querySelector("#stopButton");
 stopButton.addEventListener("click", stopSlide);
 
+function startApp() {
+  slide.setAttribute("src", imagesArray[0])
+}
 
 function slideForward() {
   currentSlide = currentSlide + 1;
@@ -50,27 +53,31 @@ function slideForward() {
     currentSlide = 0;
   }
   slide.setAttribute("src", imagesArray[currentSlide]);
+  if (currentSlide === imagesArray.length - 1) {
+    slide.setAttribute("src", imagesArray[0]);
+  }
 }
 
 function slideBack() {
   currentSlide = currentSlide - 1;
   if (currentSlide > imagesArray.length - 1) {
     currentSlide = 0;
-  }
+  } 
   slide.setAttribute("src", imagesArray[currentSlide]);
 }
 
 function slideAutoForward() {
-  autoSlideForward = setInterval((slideForward), 1000);
+  autoSlideForward = setInterval((slideForward), 1500);
 } 
 
 function slideAutoBack() {
-  autoSlideBack = setInterval(slideBack)
+  autoSlideBack = setInterval((slideBack), 1500)
 }
 
 function stopSlide() {
+  slide.setAttribute("src", imagesArray[0]);
   clearInterval(autoSlideForward);
   clearInterval(autoSlideBack)
 }
 
-// stopSlide()
+startApp()
