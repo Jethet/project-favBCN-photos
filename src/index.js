@@ -54,7 +54,7 @@ function slideForward() {
   }
   slide.setAttribute("src", imagesArray[currentSlide]);
   if (currentSlide === imagesArray.length - 1) {
-    slide.setAttribute("src", imagesArray[0]);
+    slideForward()
   }
 }
 
