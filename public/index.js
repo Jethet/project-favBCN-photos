@@ -22,6 +22,12 @@ let imagesArray = [
 
 //  https://api.unsplash.com/
 
+let slide = document.querySelector("#image");
+let currentSlide = 0;
+slide.setAttribute("src", imagesArray[currentSlide]);
+let autoSlideForward
+let autoSlideBack
+
 let buttonForward = document.querySelector("#forwardButton");
 buttonForward.addEventListener("click", slideForward);
 
@@ -37,9 +43,6 @@ autoBack.addEventListener("click", slideAutoBack);
 let stopButton = document.querySelector("#stopButton");
 stopButton.addEventListener("click", stopSlide);
 
-let slide = document.querySelector("#image");
-let currentSlide = 0;
-slide.setAttribute("src", imagesArray[currentSlide]);
 
 function slideForward() {
   currentSlide = currentSlide + 1;
@@ -58,18 +61,16 @@ function slideBack() {
 }
 
 function slideAutoForward() {
-  let autoSlide = setInterval(() => {
-    slideForward();
-  }, 1000);
-  if (currentSlide === imagesArray.length - 1) {
-    console.log(currentSlide);
-    
-    clearInterval(autoSlide);
-  }
-}
+  autoSlideForward = setInterval((slideForward), 1000);
+} 
 
-function slideAutoBack() {}
+function slideAutoBack() {
+  autoSlideBack = setInterval(slideBack)
+}
 
 function stopSlide() {
-  clearInterval(autoSlide);
+  clearInterval(autoSlideForward);
+  clearInterval(autoSlideBack)
 }
+
+// stopSlide()
