@@ -8,7 +8,6 @@ let imagesArray = [
   "https://wallpapercave.com/wp/wp1825805.jpg",
   "https://2.bp.blogspot.com/-lPfS-jj6nog/Tok3FT1Nb2I/AAAAAAAADn0/ODXxQkGxXY8/s1600/barcelona-city-2011-photo-4.jpg",
   "https://urbansurf.me/wp-content/uploads/2019/05/Barcelona-City-Attractions.jpg",
-  "https://www.cooltur.org/wp-content/uploads/2018/10/COOLTUR-Turisme-Cultural-ENTRADA-ROMANA-CATEDRAL-BARCELONA.jpg",
   "https://www.pride.com/sites/www.pride.com/files/2015/12/23/sagradafamilia.jpg",
   "https://media.timeout.com/images/101851347/image.jpg",
   "https://getwallpapers.com/wallpaper/full/6/7/b/1087965-full-size-barcelona-city-wallpapers-2941x1961-for-hd-1080p.jpg",
@@ -25,8 +24,7 @@ let imagesArray = [
 let slide = document.querySelector("#image");
 let currentSlide = 0;
 slide.setAttribute("src", imagesArray[currentSlide]);
-let autoSlideForward;
-let autoSlideBack;
+let autoSlide;
 
 let buttonForward = document.querySelector("#forwardButton");
 buttonForward.addEventListener("click", slideForward);
@@ -49,9 +47,9 @@ function startApp() {
 
 function slideForward() {
   currentSlide = currentSlide + 1;
-  // if (currentSlide > imagesArray.length - 1) {
-  //   currentSlide = 0;
-  // }
+  if (currentSlide > imagesArray.length - 1) {
+    currentSlide = 0;
+  }
   slide.setAttribute("src", imagesArray[currentSlide]);
   if (currentSlide === imagesArray.length - 1) {
     slideForward();
@@ -67,17 +65,16 @@ function slideBack() {
 }
 
 function slideAutoForward() {
-  autoSlideForward = setInterval(slideForward, 1500);
+  autoSlide = setInterval(slideForward, 1500);
 }
 
 function slideAutoBack() {
-  autoSlideBack = setInterval(slideBack, 1500);
+  autoSlide = setInterval(slideBack, 1500);
 }
 
 function stopSlide() {
   slide.setAttribute("src", imagesArray[0]);
-  clearInterval(autoSlideForward);
-  clearInterval(autoSlideBack);
+  clearInterval(autoSlide);
 }
 
 startApp();

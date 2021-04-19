@@ -6,13 +6,15 @@ body {
 }
 
 .image-container{
-  width: 90vh;
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+  height: 600px;
 }
 
 #image {
-  height: auto;
   width: 100%;
-  margin: 10px;
+  height: 100%;
   object-fit: cover;
 }
 
