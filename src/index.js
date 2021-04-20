@@ -108,9 +108,11 @@ fetch("https://api.weatherbit.io/v2.0/current?lat=41.390205&lon=2.154007&key=2ac
 .then((info) => {
   console.log(info)
 
-  let icon = document.querySelector(".icon")
-  let todayIcon = info.data[0].weather.icon
-  icon.innerHTML = todayIcon
+  let image = document.createElement("img");
+  // image.src = info.data[0].weather.code;
+  image.src = "800"
+  let iconDiv = document.querySelector(".icon-div");
+  iconDiv.appendChild(image);
 
   let temperature = document.querySelector(".temperature")
   let todayTemperature = info.data[0].app_temp
