@@ -2,7 +2,7 @@ body {
   margin: 0 auto;
 }
 
-.image-container{
+.image-container {
   display: flex;
   justify-content: center;
   height: 600px;
@@ -22,7 +22,7 @@ body {
 button {
   margin: 10px;
   border-radius: 5px;
-  background-color:lightblue
+  background-color: lightblue;
 }
 
 .info {
@@ -32,7 +32,13 @@ button {
 }
 
 .weather-box {
+  display: flex;
+  flex-direction: column;
   width: 40%;
+}
+
+.weather-box ul {
+  list-style: none;
 }
 
 .credits {

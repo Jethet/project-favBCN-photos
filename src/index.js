@@ -107,10 +107,18 @@ fetch("https://api.weatherbit.io/v2.0/current?lat=41.390205&lon=2.154007&key=2ac
 .then((response) => response.json())
 .then((info) => {
   console.log(info)
-  
-  let bcnWeather = document.querySelector(".weather-box")
-  let todayWeather = info.data[0].weather.description
-  bcnWeather.innerHTML = todayWeather
+
+  let icon = document.querySelector(".icon")
+  let todayIcon = info.data[0].weather.icon
+  icon.innerHTML = todayIcon
+
+  let temperature = document.querySelector(".temperature")
+  let todayTemperature = info.data[0].app_temp
+  temperature.innerHTML = "Temperature: " + todayTemperature + " Celsius"
+
+  let description = document.querySelector(".description")
+  let todayDescription = info.data[0].weather.description
+  description.innerHTML = "Weather today: " + todayDescription
 })
 .catch((error) => console.log(error)
 )
