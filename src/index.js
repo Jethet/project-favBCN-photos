@@ -125,5 +125,29 @@ fetch("https://api.weatherbit.io/v2.0/current?lat=41.390205&lon=2.154007&key=2ac
 .catch((error) => console.log(error)
 )
 
+// Barcelona time
+function formatTime(num) {
+  if (num < 10) {
+    num = "0" + num;
+  }
+  return num;
+}
+
+// Display current time in timer view
+function startTime() {
+  const today = new Date();
+  let hour = today.getHours();
+  let minute = today.getMinutes();
+  let second = today.getSeconds();
+  hour = formatTime(hour);
+  minute = formatTime(minute);
+  second = formatTime(second);
+
+  document.querySelector("#current-time").innerHTML = hour + ":" + minute + ":" + second;
+  setTimeout(function () {
+    startTime();
+  }, 500);
+}
 
 startApp();
+startTime()
