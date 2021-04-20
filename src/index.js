@@ -103,13 +103,17 @@ function stopSlide() {
 }
 
 // WEATHER
-fetch("https://api.weatherbit.io/v2.0/current?city=Barcelona&country=Spain&key=2ac7e0a6ea244c14ae97c936f6d045c1")
-.then((result) => result.json())
-.then((weather) => {
-  let bcnWeather = document.querySelector("weather-box")
-  let todayWeather = weather[0].city_name
+fetch("https://api.weatherbit.io/v2.0/current?lat=41.390205&lon=2.154007&key=2ac7e0a6ea244c14ae97c936f6d045c1")
+.then((response) => response.json())
+.then((info) => {
+  console.log(info)
+  
+  let bcnWeather = document.querySelector(".weather-box")
+  let todayWeather = info.data[0].weather.description
   bcnWeather.innerHTML = todayWeather
 })
+.catch((error) => console.log(error)
+)
 
 
 startApp();
