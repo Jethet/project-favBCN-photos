@@ -102,4 +102,14 @@ function stopSlide() {
   clearInterval(autoSlide);
 }
 
+// WEATHER
+fetch("https://api.weatherbit.io/v2.0/current?city=Barcelona&country=Spain&key=2ac7e0a6ea244c14ae97c936f6d045c1")
+.then((result) => result.json())
+.then((weather) => {
+  let bcnWeather = document.querySelector("weather-box")
+  let todayWeather = weather[0].city_name
+  bcnWeather.innerHTML = todayWeather
+})
+
+
 startApp();

@@ -1,14 +1,10 @@
 body {
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .image-container{
   display: flex;
   justify-content: center;
-  width: 90vw;
   height: 600px;
 }
 
@@ -29,20 +25,25 @@ button {
   background-color:lightblue
 }
 
-.footer-text {
-  margin: 70px;
+.info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
-.footer-text ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+.weather-box {
+  width: 40%;
+}
+
+.credits {
+  width: 40%;
+}
+
+.credits ul {
   list-style: none;
   font-style: italic;
   font-size: smaller;
 }
 
-.footer-text li {
-  margin-right: 20px;
-}
+/* .footer-text {
+} */
