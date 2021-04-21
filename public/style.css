@@ -26,6 +26,8 @@ button {
   margin: 10px;
   border-radius: 5px;
   background-color: lightblue;
+  color: black;
+  font-weight: bold;
 }
 
 .info {
@@ -47,12 +49,16 @@ button {
   margin-top: 40px;
   margin-right: 10%;
   margin-left: 10%;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+
   font-style: italic;
   font-size: smaller;
 }
 
-/* .credits {
-  border: 1px solid lightskyblue
-} */
-
+.timer-current {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
 
