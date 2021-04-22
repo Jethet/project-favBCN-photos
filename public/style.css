@@ -54,7 +54,6 @@ button {
   flex-direction: column;
   align-items: center;
   width: 40%;
-  /* margin-right: 5%; */
 }
 
 .bcn-flag {
@@ -75,4 +74,36 @@ button {
   color: rgb(59, 58, 58);
   font-style: italic;
   font-size: smaller;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .info {
+    font-weight: bold;
+  }
+
+  .weather-box {
+    width: 35%;
+  }
+
+  .temperature {
+    width: 65%;
+  }
+
+  .description {
+    width: 80%;
+  }
+
+  .timer-box {
+    width: 30%;
+  }
+  
+  .bcn-flag {
+    width: 60%;
+    margin-right: 30px;
+
+  }
 }
