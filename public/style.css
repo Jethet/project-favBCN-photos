@@ -39,7 +39,6 @@ button {
   font-weight: 400;
   line-height: 1.5;
   color: #333;
-  border: 1px solid red;
 }
 
 .weather-box {
@@ -48,15 +47,17 @@ button {
   width: 50%;
   margin-left: 5%;
   margin-bottom: 70px;
-  border: 1px solid green;
 }
 
 .timer {
   display: flex;
   flex-direction: column;
   margin-right: 5%;
-  font-size: 16px;
-  border: 1px solid blue;
+}
+
+.bcn-flag {
+  width: 25%;
+  margin-bottom: 50px;
 }
 
 .credits-footer {
