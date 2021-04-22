@@ -1,5 +1,5 @@
 # My favourite city Barcelona, in pictures
 
-*under construction*
+This is a simple project, with a carrousel of photographs from the city of Barcelona (no Bootstrap).
 
-This is a simple project, intended as a carrousel of photographs from the city of Barcelona (no Bootstrap).
+The current Barcelona weather is included, using the weather.io api. The current Barcelona time is included as well.
