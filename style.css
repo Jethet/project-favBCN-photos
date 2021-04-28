@@ -35,10 +35,26 @@ button {
   justify-content: space-around;
   margin-top: 40px;
   font-family: "Barcelona bold", Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.5;
   color: #333;
+}
+
+.icon-div img {
+  width: 100%;
+}
+
+.icon-box {
+  width: 60%;
+  height: 70%;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
 }
 
 .weather-box {
@@ -49,22 +65,19 @@ button {
   margin-bottom: 70px;
 }
 
-.description {
-  margin-top: 10px;
-}
-
 .timer-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 40%;
+  padding-top: 2%;
   font-family: "Barcelona bold";
 }
 
 .bcn-flag {
   width: 25%;
   margin-top: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .credits-footer {
@@ -82,6 +95,15 @@ button {
 
 
 @media only screen and (min-width: 1001px) {
+
+  .info {
+    font-size: 25px;
+  }
+
+  .weather-box {
+    width: 50%;
+  }
+
   .bcn-flag {
     width: 50%;
     margin-top: 25px;
@@ -93,7 +115,21 @@ button {
 
 @media only screen and (max-width: 1000px) and (min-width: 605px) {
   .info {
-    font-size: 17px;
+    font-size: 20px;
+  }
+
+  .temperature {
+    width: 65%;
+  }
+
+  .description {
+    width: 80%;
+  }
+
+  .bcn-flag {
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 40px;
   }
 }
 
@@ -108,10 +144,11 @@ button {
     height: 400px;
   }
   
-  .weather-box {
-    width: 45%;
-    border: 1px solid red;
+  .icon-box {
+    width: 80%;
+    height: 80%;
   }
+
 
   .temperature {
     width: 65%;
