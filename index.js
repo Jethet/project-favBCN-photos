@@ -1,7 +1,6 @@
 let imagesArray = [
   "https://1.bp.blogspot.com/-9OxXyVavxoI/T1TsRCO5OlI/AAAAAAAAHjc/qqNGhDmiCBw/s1600/ES_Bar_PanoramawSagrada.jpg",
   "https://www.europelanguagejobs.com/uploads/posts/Barcelona-city-flats.jpg",
-  "https://www.barcelonaborne.com/wp-content/uploads/2019/02/Ajuntament_de_Barcelona_-e1493376692916-760x428.jpg",
   "https://cdn.thecrazytourist.com/wp-content/uploads/2016/07/Barcelona-City-Beach.jpg",
   "https://www.citylifebarcelona.com/wp-content/uploads/barcab.jpg",
   "https://clickstay.s3-eu-west-1.amazonaws.com/images/blog/post/Barcelona%20beach.jpg",
@@ -25,8 +24,6 @@ let imagesArray = [
   "https://upload.wikimedia.org/wikipedia/commons/b/b1/Front_view_of_the_central_building_of_the_Port_of_Barcelona._Barcelona%2C_Catalonia%2C_Spain.jpg",
   "https://thecoffeevine.com/wp-content/uploads/2017/03/barcelona1.jpg",
   "https://www.migratingmiss.com/wp-content/uploads/2016/06/Gaudi-Building-Barcelona.jpg",
-  "https://duckduckgo.com/?t=ffab&q=barcelona+pictures&atb=v197-1&iax=images&ia=images&iai=https%3A%2F%2Fcbsnews1.cbsistatic.com%2Fhub%2Fi%2F2017%2F09%2F12%2F471eed98-002b-4adb-8513-ffdd76c7e856%2Fsagrada.jpg",
-  "https://duckduckgo.com/?t=ffab&q=barcelona+pictures&atb=v197-1&iax=images&ia=images&iai=https%3A%2F%2Fimages.trvl-media.com%2Fmedia%2Fcontent%2Fshared%2Fimages%2Ftravelguides%2Fdestination%2F179992%2FBarcelona-52293.jpg",
   "https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/Spain/Barcelona/Barcelona--parc-de-la-ciutadella-xlarge.jpg",
   "https://www.eh.ub.edu/img/barcelona/5.jpg",
   "https://bonavista-apartments.com/blog/wp-content/uploads/2014/05/casa-batllo-barcelona.jpg",
